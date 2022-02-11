@@ -6,11 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        JFrame f = new JFrame("A JFrame");
-        f.setSize(250, 250);
-        f.setLocation(300,200);
+        JFrame frame = new JFrame("A JFrame");
+        frame.setSize(250, 250);
+        frame.setLocation(300,200);
 
-        f.setVisible(true);
+        frame.setVisible(true);
 
     }
 }
