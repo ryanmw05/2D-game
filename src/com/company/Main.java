@@ -155,7 +155,7 @@ public class Main extends JFrame implements ActionListener, KeyListener, ChangeL
      */
 
     Main(){
-        super ("CBallMaze - Ball Maze Application"); //Sets the title of the program
+        super ("2D Ball Maze Game"); //Sets the title of the program
         setSize(775, 650); //Sets the size of the program to 775x650
         setIconImage(new ImageIcon("images/greenfoot.png").getImage()); //Sets the dock icon
         setLayout(null); //Sets the layout of the main frame to null
@@ -676,6 +676,7 @@ public class Main extends JFrame implements ActionListener, KeyListener, ChangeL
      * Option 1 is the default
      * The option 2 would activate the intermediate move methods
      * In option 3, the ball is set to be moved by the user
+     * THIS IS WHY THE BALL AUTO MOVES, NEED TO EDIT
      */
 
     private void moveBall() {
@@ -692,6 +693,7 @@ public class Main extends JFrame implements ActionListener, KeyListener, ChangeL
         switch(optionNumber) {
             //When the option selected is Option 1
             case "1":
+                /*
                 if(jLCheckDown != null) {
                     canMoveLeft = false;
                     move(MOVE_DOWN);
@@ -706,6 +708,7 @@ public class Main extends JFrame implements ActionListener, KeyListener, ChangeL
                         win();
                     }
                 }
+                 */
                 break;
 
             //When the option selected is Option 2
@@ -1012,8 +1015,7 @@ public class Main extends JFrame implements ActionListener, KeyListener, ChangeL
     private void aboutHelp() {
         JOptionPane.showMessageDialog(null,
                 "CBallMaze - Ball Maze Application \n"
-                        + "Version 1.0 \n"
-                        + "By Diwas Lamsal \n",
+                        + "Version 1.0 \n",
                 "About CBallMaze", 1, null);
     }
 
