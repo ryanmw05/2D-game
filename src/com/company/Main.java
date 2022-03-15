@@ -746,7 +746,6 @@ public class Main extends JFrame implements ActionListener, KeyListener, ChangeL
                     canMoveLeft = false;
                     timerAdvanced = new Timer(50, new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
-                            move(MOVE_DOWN);
                         }
                     });
                     timerAdvanced.start();
