@@ -35,8 +35,6 @@ import javax.swing.event.ChangeListener;
 
 public class Main extends JFrame implements ActionListener, KeyListener, ChangeListener{
 
-    private static final long serialVersionUID = 445134924344204802L;
-
     //Declaring different objects and variables that make up the program
     private JButton jBActBtn, jBRunBtn, jBResetBtn;
 
