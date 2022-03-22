@@ -158,7 +158,6 @@ public class Main extends JFrame implements ActionListener, KeyListener, ChangeL
         setIconImage(new ImageIcon("images/greenfoot.png").getImage()); //Sets the dock icon
         setLayout(null); //Sets the layout of the main frame to null
         setDefaultCloseOperation(EXIT_ON_CLOSE); //Sets default close operation as exit
-        createMenuBar();
         setJMenuBar(mb); //Sets the menu bar to mb
         setResizable(false); //Makes the window non-resizable
         setLocationRelativeTo(null); //Brings the window to the monitor's centre
@@ -170,88 +169,6 @@ public class Main extends JFrame implements ActionListener, KeyListener, ChangeL
         setVisible(true); //Makes this frame visible
     }
 
-
-    /*
-     *
-     * 	This method deals with Creating the Menu bar and adding items to the menu bar.
-     * 	It also deals with the different events associated with the Menu items.
-     *
-     */
-
-    private void createMenuBar() {
-        mb = new JMenuBar();
-
-        //The Scenario Menu and its menu-items
-
-        scenario = new JMenu("Scenario");
-
-        newStrideScenario = new JMenuItem("New Stride Scenario");
-        newJavaScenario = new JMenuItem("New Java Scenario");
-        open = new JMenuItem("Open");
-        close = new JMenuItem("Close");
-        saveAs = new JMenuItem("Save as");
-        saveAs.addActionListener(this);
-
-        quit = new JMenuItem("Quit");
-        quit.addActionListener(this);
-
-        scenario.add(newStrideScenario);
-        scenario.add(newJavaScenario);
-        scenario.add(open);
-        scenario.add(close);
-        scenario.add(saveAs);
-        scenario.add(quit);
-        mb.add(scenario);
-
-        //The Edit menu
-        edit = new JMenu("Edit");
-
-        newClass = new JMenuItem("New Class");
-        importClass = new JMenuItem("Import Class");
-        deleteClass = new JMenuItem("Delete Class");
-        convertToJava = new JMenuItem("Convert to Java Scenario");
-        preferences = new JMenuItem("Preferences");
-
-        edit.add(newClass);
-        edit.add(importClass);
-        edit.add(deleteClass);
-        edit.add(convertToJava);
-        edit.add(preferences);
-
-        mb.add(edit);
-
-        //The controls menu
-        controls = new JMenu("Controls");
-
-        act = new JMenuItem("Act");
-        act.addActionListener(this);
-        run = new JMenuItem("Run");
-        run.addActionListener(this);
-        pause = new JMenuItem("Pause");
-        pause.addActionListener(this);
-        reset = new JMenuItem("Reset");
-        reset.addActionListener(this);
-        saveTheWorld = new JMenuItem("Save the World");
-
-        controls.add(act);
-        controls.add(run);
-        controls.add(pause);
-        controls.add(reset);
-        controls.add(saveTheWorld);
-
-        mb.add(controls);
-
-        //The help menu
-        help = new JMenu("Help");
-        about = new JMenuItem("About");
-        copyright = new JMenuItem("Copyright");
-        about.addActionListener(this);
-
-        help.add(about);
-        help.add(copyright);
-
-        mb.add(help);
-    }
 
     /* ------------------------- THE  MAIN METHOD -------------------------*/
     public static void main(String[] args) {
@@ -623,30 +540,6 @@ public class Main extends JFrame implements ActionListener, KeyListener, ChangeL
         emptyButton[3].setBounds(10, 280, 45, 25);
         emptyButton[4].setBounds(100, 280, 45, 25);
 
-
-        //Panel Three option buttons
-        jBOption1 = new JButton("Option 1");
-        jBOption1.setFont(new Font("Serif", Font.BOLD, 10));
-        jBOption1.addActionListener(this);
-        jBOption2 = new JButton("Option 2");
-        jBOption2.setFont(new Font("Serif", Font.BOLD, 10));
-        jBOption2.addActionListener(this);
-        jBOption3 = new JButton("Option 3");
-        jBOption3.setFont(new Font("Serif", Font.BOLD, 10));
-        jBOption3.addActionListener(this);
-        jBExit = new JButton("Exit");
-        jBExit.setFont(new Font("Serif", Font.BOLD, 10));
-        jBExit.addActionListener(this);
-
-        jBOption1.setBounds(3, 312, 74, 30);
-        jBOption2.setBounds(79, 312, 74, 30);
-        jBOption3.setBounds(3, 344, 74, 30);
-        jBExit.setBounds(79, 344, 74, 30);
-
-        jPRightPanel.add(jBOption1);
-        jPRightPanel.add(jBOption2);
-        jPRightPanel.add(jBOption3);
-        jPRightPanel.add(jBExit);
 
         //Panel Three direction image
         jLDirectionIcon = new JLabel(directionImageWest);
